@@ -1,5 +1,105 @@
 {
-	"add":{
+	"Addition":{
+		"opcode":"0b00000",
+		"semantics":"Performs reg1 = reg2+ reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"add reg1 reg2 reg3",
+		"type":"A"
+	},
+	"Subtraction":{
+		"opcode":"0b00001",
+		"semantics":"Performs reg1 = reg2-reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"sub reg1 reg2 reg3",
+		"type":"A"
+	},
+	"Move Immediate":{
+		"opcode":"0b00010",
+		"semantics":"Performs reg1 = $Imm where Imm is a 8 bit value.",
+		"syntax":"mov reg1 $Imm",
+		"type":"B"
+	},
+	"Move Register":{
+		"opcode":"0b00011",
+		"semantics":"Performs reg1 =reg2.",
+		"syntax":"mov reg1 reg2",
+		"type":"C"
+	},"Load":{
+		"opcode":"0b00100",
+		"semantics":"Loads data from mem_addr into reg1.",
+		"syntax":"ld reg1 mem_addr",
+		"type":"A"
+	},
+	"Multiply":{
+		"opcode":"0b00001",
+		"semantics":"Performs reg1 = reg2-reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"sub reg1 reg2 reg3",
+		"type":"A"
+	},"Divide":{
+		"opcode":"0b00000",
+		"semantics":"Performs reg1 = reg2+ reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"add reg1 reg2 reg3",
+		"type":"A"
+	},
+	"Right Shift":{
+		"opcode":"0b00001",
+		"semantics":"Performs reg1 = reg2-reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"sub reg1 reg2 reg3",
+		"type":"A"
+	},"Left Shift":{
+		"opcode":"0b00000",
+		"semantics":"Performs reg1 = reg2+ reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"add reg1 reg2 reg3",
+		"type":"A"
+	},
+	"Exclusive OR":{
+		"opcode":"0b00001",
+		"semantics":"Performs reg1 = reg2-reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"sub reg1 reg2 reg3",
+		"type":"A"
+	},"Or":{
+		"opcode":"0b00000",
+		"semantics":"Performs reg1 = reg2+ reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"add reg1 reg2 reg3",
+		"type":"A"
+	},
+	"And":{
+		"opcode":"0b00001",
+		"semantics":"Performs reg1 = reg2-reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"sub reg1 reg2 reg3",
+		"type":"A"
+	},"Invert":{
+		"opcode":"0b00000",
+		"semantics":"Performs reg1 = reg2+ reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"add reg1 reg2 reg3",
+		"type":"A"
+	},
+	"Compare":{
+		"opcode":"0b00001",
+		"semantics":"Performs reg1 = reg2-reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"sub reg1 reg2 reg3",
+		"type":"A"
+	},"Unconditional Jump":{
+		"opcode":"0b00000",
+		"semantics":"Performs reg1 = reg2+ reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"add reg1 reg2 reg3",
+		"type":"A"
+	},
+	"Jump If Less Than":{
+		"opcode":"0b00001",
+		"semantics":"Performs reg1 = reg2-reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"sub reg1 reg2 reg3",
+		"type":"A"
+	},"Jump If Greater Than":{
+		"opcode":"0b00000",
+		"semantics":"Performs reg1 = reg2+ reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"add reg1 reg2 reg3",
+		"type":"A"
+	},
+	"Jump If Equal":{
+		"opcode":"0b00001",
+		"semantics":"Performs reg1 = reg2-reg3. If the computation overflows, then the overflow flag is set",
+		"syntax":"sub reg1 reg2 reg3",
+		"type":"A"
+	},"Halt":{
 		"opcode":"0b00000",
 		"semantics":"Performs reg1 = reg2+ reg3. If the computation overflows, then the overflow flag is set",
 		"syntax":"add reg1 reg2 reg3",
