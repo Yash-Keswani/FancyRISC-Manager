@@ -29,6 +29,15 @@ def check_variant(variant, line, PC):
 			errors.append('Variable defined after start of program')
 	if variant == 'instruction':		
 		pass 
+		opc, cat = find_cat(line)['opcode'], find_cat(line)['cat']
+		lookahead = len([1 for x in fl[line_num:] if x.strip() != '']) > 1
+		error = check_cat(cat, line, mem, lookahead) 
+	
+		# handles instruction category-specific errors
+		if (error[0] == True):
+			err.log_error(line_num+1, error[1])
+			continue
+
 	
 	"""
 	Look up f-strings and split function in python! They will be helpful here. 
